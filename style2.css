@@ -1,0 +1,321 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+html, body{
+   height: 100%;
+   margin: 0;
+}
+
+body{
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+main{
+   flex: 1;
+}
+
+.navbar{
+   background-color: #fff;
+   height:80px ;
+   margin: 20px;
+   border-radius: 16px;
+   padding: 0.5rem;
+}
+
+.navbar-brand{
+    font-weight: 500;
+    color: #1b0366,;
+    font-size: 24px;
+    transition: 0.3s color;
+    font-family: "Lobster", cursive;
+}
+
+.navbar-nav .btn{
+
+  border-color: #1b0366; 
+  color: #1b0366;
+  font-weight: 500;  
+}
+
+.navbar-nav .btn:hover{
+   font-weight: 500;
+   background-color: #1b0366;
+   color: white;
+}
+
+.dropdown-item{
+   font-weight: 500;
+    color: #1b0366,;
+    font-weight: 500;
+    transition: 0.3s color;
+
+}
+
+.fade-screen{
+   position: fixed;
+   z-index: 9999;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   animation: fadeOut 1s ease forwards;
+}
+
+.fade-screen img{
+   width: 150px;
+   height: auto;
+   opacity: 1;
+   animation: fadeOutImage 1s ease forwards;
+   animation-delay: 0.5s;
+}
+@keyframes fadeOut {
+   from{
+      opacity: 1;
+   }
+   to{
+      opacity: 0;
+      visibility: hidden;
+   }
+}
+@keyframes fadeOutImage {
+   to{
+      opacity: 0;
+      transform: scale(1.1);
+   }
+}
+.navbar-toggler{
+  border: none;
+  font-size: 1.25rem;
+
+}
+.navbar-toggler-icon{
+  border-color: white; 
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+   box-shadow: none;
+   outline: none;
+}
+
+.nav-link{
+    color: #666777 ;
+    font-weight: 500;
+    position: relative;
+
+}
+.nav-link:hover, .nav-link:active{
+   color: #000; 
+}
+
+@media (min-width: 991px){
+  .nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: #1b0366;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+.nav-link:hover::before, .nav-link.active::before {
+   width: 100%;
+   visibility: visible; 
+}
+
+}
+
+.hero-section{
+    position: relative;
+    background: url("https://64.media.tumblr.com/f8060324b748132b00821b0f6adaea55/3b0163a7ad927317-ae/s2048x3072/0010cc44ea7549e775ebb403acfbd577ccc4a639.pnj") no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-section::before{
+   background-color: rgba(0, 0, 0, 0.5);
+   content: "";
+   position: absolute;
+   inset: 0;
+   z-index: 1;
+   pointer-events: none;
+}
+
+.hero-section p{
+    color: white;
+    font-size: 20px;
+    font-family: "Mozilla Headline", sans-serif;
+}
+
+.hero-section .container{
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-section h1{
+   font-size: 4rem;
+   font-weight: 700;
+   color: white;
+   font-family: "Mozilla Headline", sans-serif;
+}
+
+.new h1{
+    font-family: "Mozilla Headline", sans-serif;
+}
+
+.carousel-item{
+   height: 500px;
+}
+.carousel-item img{
+   object-fit: cover;
+   height: 100%;
+}
+
+.footer{
+   background-color: #08152e;
+}
+
+
+
+.about .container-fluid{
+    background-color: #08152e;
+    background-image: url("https://64.media.tumblr.com/5a0ddbc70c4e76dc2dcae8778449a71a/3b0163a7ad927317-0d/s1280x1920/a272f13063d04f279ca537f7b3eeb34f5222e78d.pnj");
+    background-size: cover;
+    background-position-y: 30%;
+    width: 100%;
+   
+}
+
+.character .container-fluid{
+    background-image: url("https://64.media.tumblr.com/59e491f36cfcef58697ac08d142ca306/3b0163a7ad927317-f6/s2048x3072/584b0fe3a893ccc9827693a52215c935e1132adf.pnj");
+    background-size: cover;
+    width: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    height: 300px;  
+}
+.bee-container h3{
+    font-size: 30px;
+    color: #d19a2d;
+     font-family: "Mozilla Headline", sans-serif;
+}
+.bee-container p{
+    font-size: 22px;
+    color: white;
+     font-family: "Mozilla Headline", sans-serif;
+}
+
+
+
+
+
+
+.about h2{
+   color: white;
+   font-size: 26px;
+}
+.about p{
+   color: white;
+   font-size: 22px;
+}
+
+.new{
+   color: white;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+}
+
+.fade-in {
+   opacity: 0;
+   transition: opacity 0.5s ease-in-out;
+}
+.fade-in.show{
+   opacity: 1;
+}
+
+
+
+
+.offcanvas-title{
+   font-weight: 500;
+    color: #1b0366,;
+    font-size: 24px;
+    transition: 0.3s color;
+    font-family: "Lobster", sans-serif;
+}
+
+
+.card-img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-bottom-right-radius: 0px;
+   border-top-right-radius: 0px;
+}
+
+.card h5{
+   color: gray;
+   font-size: 14px;  
+}
+
+.card h3{
+     text-transform: uppercase;
+   color: rgb(177, 177, 177);
+   font-size: 20px; 
+}
+
+.card p{
+    font-size: 5rem;
+    color: grey;
+}
+
+.card-body .btn{
+   font-weight: 600;
+}
+
+.card-hover{
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover{
+   transform: scale(1.05);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.custom-close{
+    background-color: white;
+    filter: invert(100%);
+}
+
+.modal-body p{
+   font-size: 15.5px;
+   color: white;
+}
+
+
+
+.character h2{
+   font-size: 24px;
+   font-family: "Montserrat", sans-serif;
+}
+
+.character p{
+   font-size: 18px;
+   font-family: "Montserrat", sans-serif;
+   font-weight: 400;
+}

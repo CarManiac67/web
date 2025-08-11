@@ -1,0 +1,319 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+.navbar{
+   background-color: #fff;
+   height:80px ;
+   margin: 20px;
+   border-radius: 16px;
+   padding: 0.5rem;
+}
+
+.navbar-brand{
+    font-weight: 500;
+    color: #1b0366,;
+    font-size: 24px;
+    transition: 0.3s color;
+    font-family: "Lobster", cursive;
+}
+
+.navbar-nav .btn{
+
+  border-color: #1b0366; 
+  color: #1b0366;
+  font-weight: 500; 
+}
+
+.navbar-nav .btn:hover{
+   font-weight: 500;
+   font-weight: 500;
+   background-color: #1b0366;
+   color: white;
+}
+
+.dropdown-item{
+   font-weight: 500;
+    color: #1b0366,;
+    font-weight: 500;
+    transition: 0.3s color;
+}
+
+.fade-screen{
+   position: fixed;
+   z-index: 9999;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   animation: fadeOut 2s ease forwards;
+}
+
+.fade-screen img{
+   width: 150px;
+   height: auto;
+   opacity: 1;
+   animation: fadeOutImage 2s ease forwards;
+   animation-delay: 0.5s;
+}
+@keyframes fadeOut {
+   from{
+      opacity: 1;
+   }
+   to{
+      opacity: 0;
+      visibility: hidden;
+   }
+}
+@keyframes fadeOutImage {
+   to{
+      opacity: 0;
+      transform: scale(1.1);
+   }
+}
+
+.navbar-toggler{
+  border: none;
+  font-size: 1.25rem;
+
+}
+.navbar-toggler-icon{
+  border-color: white; 
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+   box-shadow: none;
+   outline: none;
+}
+
+.carrusel-inner h5{
+   font-size: 26px;
+}
+.carrusel-inner h2{
+   font-size: 33px;
+}
+.carrusel-inner p{
+   font-size: 20px;
+   color: white;
+}
+
+
+.nav-link{
+    color: #666777 ;
+    font-weight: 500;
+    position: relative;
+
+}
+.nav-link:hover, .nav-link:active{
+   color: #000; 
+}
+
+@media (min-width: 991px){
+  .nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: #1b0366;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+.nav-link:hover::before, .nav-link.active::before {
+   width: 100%;
+   visibility: visible; 
+}
+
+}
+
+.hero-section{
+    background: url("https://64.media.tumblr.com/2d93e24684a6824d3913617925b28c24/3b0163a7ad927317-d1/s1280x1920/68c66998859a0a308de831bd662dcf8976541b9b.pnj") no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-section::before{
+   background-color: rgba(0, 0, 0, 0.6);
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+}
+
+.carousel{
+   max-height: 500px;
+}
+
+.carousel-item{
+   height: 500px;
+}
+.carousel-item img{
+   width: 100%;
+   object-fit: contain;
+   height: auto;
+}
+@media (max-width: 768px){
+   .carousel{
+      max-height: 250px;
+   }
+}
+.carousel-caption{
+   font-family: "Mozilla Headline", sans-serif;
+}
+
+.footer{
+   background-color: #08152e;
+}
+
+.hero-section .container{
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-section h1{
+   font-size: 4rem;
+   font-weight: 700;
+   color: white;
+    font-family: "Mozilla Headline", sans-serif;
+}
+
+.hero-section h3{  
+   color: white;
+    font-family: "Mozilla Headline", sans-serif;
+}
+
+.new h3{
+   font-family: "Mozilla Headline", sans-serif;
+}
+.about .container-fluid{
+    background-color: #08152e;
+    background-image: url("https://64.media.tumblr.com/5a0ddbc70c4e76dc2dcae8778449a71a/3b0163a7ad927317-0d/s1280x1920/a272f13063d04f279ca537f7b3eeb34f5222e78d.pnj");
+    background-size: cover;
+    background-position-y: 30%;
+    width: 100%;
+   
+}
+
+.about h2{
+   color: white;
+   font-size: 26px;
+   font-family: "Mozilla Headline", sans-serif;
+}
+.about p{
+   color: white;
+   font-size: 22px;
+}
+
+.new{
+   color: white;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+}
+
+.fade-in {
+   opacity: 0;
+   transition: opacity 0.5s ease-in-out;
+}
+.fade-in.show{
+   opacity: 1;
+}
+
+
+
+
+.offcanvas-title{
+   font-weight: 500;
+    color: #1b0366;
+    font-size: 24px;
+    transition: 0.3s color;
+    font-family: "Lobster", sans-serif;
+}
+
+
+.card-img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-bottom-right-radius: 0px;
+   border-top-right-radius: 0px;
+}
+
+.card h3{
+   text-transform: uppercase;
+   color: rgb(177, 177, 177);
+   font-size: .8rem;
+}
+
+.card p{
+   line-height: 1.4em;
+}
+
+.character h2{
+   font-size: 24px;
+   font-family: "Montserrat", sans-serif;
+}
+
+.character p{
+   font-size: 18px;
+   font-family: "Montserrat", sans-serif;
+   font-weight: 400;
+}
+
+.modal-title{
+   font-family: "Mozilla Headline", sans-serif;
+}
+
+.modal-body label{
+   color: white;
+   font-weight: 500; 
+}
+
+.modal-body input, textarea, select{
+   background-color: #212529;
+   color: white;
+   border: 2px solid #1b0366;
+   border-radius: 5px;
+   padding: 8px;
+} 
+
+.modal-body input:focus, textarea:focus, select:focus{
+    background-color: #212529;
+    color: white;
+
+}
+
+.modal-body input::placeholder, textarea::placeholder{
+   color: #666777;
+}
+
+.modal-body .btnS{
+   font-weight: 500;
+   background-color: #1b0366;
+   color: white;
+}
+
+.modal-footer .btnG{
+   font-weight: 500;
+   background-color: #1b0366;
+   color: white;
+   outline: none;
+}
+
+.modal-footer .btnC{
+   font-weight: 500;
+   color: white;
+}
